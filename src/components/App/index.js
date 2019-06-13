@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
-
+import '../App.css'; 
 import Shelf from '../Shelf';
 import Filter from '../Shelf/Filter';
 import GithubCorner from '../github/Corner';
 import FloatCart from '../FloatCart';
+import Footer from '../footer/footer';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+
+import Cart from '../FloatCart/index';
+import Slider from '../Slider/Slider';
+import Contact from '../contact/Contact';
+
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
+         <header>
+        <div className="nav">
+            <div className="container">
+                <h2> fruit <span>market</span></h2>
+                <ul>
+                    <Link  to="cart"  >Cart</Link>
+                    <Link  to="contact">contact</Link>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <Slider />
         <main>
           <Shelf />
         </main>
         {/* <FloatCart /> */}
+        <Contact />
+        <Footer />
       </React.Fragment>
     );
   }

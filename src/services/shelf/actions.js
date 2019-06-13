@@ -17,10 +17,10 @@ const compare = {
 };
 
 export const fetchProducts = (filters, sortBy, callback) => dispatch => {
-  return axios
-    .get(productsAPI)
-    .then(res => {
-      let { products } = res.data;
+  // return axios
+    // .get(productsAPI)
+    // .then(res => {
+      let { products } =  productsAPI  ;
 
       if (!!filters && filters.length > 0) {
         products = products.filter(p =>
@@ -40,8 +40,8 @@ export const fetchProducts = (filters, sortBy, callback) => dispatch => {
         type: FETCH_PRODUCTS,
         payload: products
       });
-    })
-    .catch(err => {
-      console.log('Could not fetch products. Try again later.');
-    });
+    // })
+    // .catch(err => {
+    //   console.log('Could not fetch products. Try again later.');
+    // });
 };
