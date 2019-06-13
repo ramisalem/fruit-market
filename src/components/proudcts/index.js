@@ -52,11 +52,11 @@ class Fruits extends Component {
     console.log(products);
     return (
       <React.Fragment>
-          {/* <ShelfHeader productsLength={products.length} /> */}
           <div id="product" className="products">
             <div className="container">
             <div className="title"><h1>our Products</h1></div>
           <ProductList products={products} />
+          <div className="clearfix"></div>
         </div>
         </div>
       </React.Fragment>
