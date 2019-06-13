@@ -7,10 +7,12 @@ import FloatCart from '../FloatCart';
 import Footer from '../footer/footer';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-
 import Cart from '../FloatCart/index';
 import Slider from '../Slider/Slider';
 import Contact from '../contact/Contact';
+import Fruits from '../proudcts/index';
+import Features from '../feature/Features';
+import About from '../about/about';
 
 
 class App extends Component {
@@ -29,9 +31,13 @@ class App extends Component {
         </div>
     </header>
     <Slider />
+    <Features />
+    <About />
         <main>
-          <Shelf />
+          {/* <Shelf /> */}
+          <Fruits />
         </main>
+      
         {/* <FloatCart /> */}
         <Contact />
         <Footer />

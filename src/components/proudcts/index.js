@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
 import { fetchProducts } from '../../services/shelf/actions';
 
 // import Spinner from '../Spinner';
 // import ShelfHeader from './ShelfHeader';
 import ProductList from './ProductList';
 
-import './style.scss';
+// import '../Shelf/style.scss';
 
-class Shelf extends Component {
+class Fruits extends Component {
   static propTypes = {
     fetchProducts: PropTypes.func.isRequired,
     products: PropTypes.array.isRequired,
@@ -50,12 +49,15 @@ class Shelf extends Component {
   render() {
     const { products } = this.props;
     const { isLoading } = this.state;
-     console.log(products);
+    console.log(products);
     return (
       <React.Fragment>
-        <div className="shelf-container">
           {/* <ShelfHeader productsLength={products.length} /> */}
+          <div id="product" className="products">
+            <div className="container">
+            <div className="title"><h1>our Products</h1></div>
           <ProductList products={products} />
+        </div>
         </div>
       </React.Fragment>
     );
@@ -71,4 +73,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { fetchProducts }
-)(Shelf);
+)(Fruits);
